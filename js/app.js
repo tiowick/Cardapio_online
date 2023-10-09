@@ -12,11 +12,13 @@ var CELULAR_EMPRESA = '5571993085732';
 
 var VALOR_CARRINHO = 0;
 
-var VALOR_ENTREGA = 5;
+var VALOR_ENTREGA = 5; // se cobrar por centvos USE(5.6):.
 
 cardapio.eventos = {
   init: () => {
     cardapio.metodos.obterItensCardapio();
+    cardapio.metodos.carregarBotaoLigar();
+    cardapio.metodos.carregarBotaoReserva();
   },
 };
 
@@ -456,7 +458,7 @@ cardapio.metodos = {
     if(MEU_CARRINHO.length > 0 && MEU_ENDERECO != null){
 
       var texto = 'Olá gostaria de fazer um pedido:';
-      texto += `\n *Itens do pedido* \n\n\${itens} `;
+      texto += `\n *Itens do pedido:* \n\n\${itens} `;
       texto += '\n*Endereço de entrega:*';
       texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
       texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
@@ -483,7 +485,8 @@ cardapio.metodos = {
 
         //https://wa.me/5571993085732?text=olá
 
-      })
+      }) 
+      
     }
 
   },
@@ -503,7 +506,56 @@ cardapio.metodos = {
       }, 800);
     }, tempo);
   },
+ 
+  // carrega o lnk do botão reserva
+  carregarBotaoReserva: () => {
 
+    var texto = 'Olá, gostaria de fazer uma *reserva.*';
+
+    let encode = encodeURI(texto);
+
+    let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+    $("#btnReserva").attr('href', URL);
+
+  },
+
+  // carrega o botão de ligar
+  carregarBotaoLigar: () => {
+
+    $("#btnLigar").attr('href', `tel:${CELULAR_EMPRESA}`);
+
+
+  },
+
+  // abre o depoimento
+  abrirDepoimento: (depoimento) => {
+
+    $("#depoimento-1").addClass('hidden');
+    $("#depoimento-2").addClass('hidden');
+    $("#depoimento-3").addClass('hidden');
+
+    $("#btnDepoimento-1").removeClass('active');
+    $("#btnDepoimento-2").removeClass('active');
+    $("#btnDepoimento-3").removeClass('active');
+
+    $("#depoimento-" + depoimento).removeClass('hidden');
+    $("#btnDepoimento-" + depoimento).addClass('active');
+
+  },
+
+  carregarBotaoWhatsApp: () => {
+
+    var texto = 'Olá, gostaria de saber mais sobre os seus serviços...';
+
+    let encode = encodeURI(texto);
+
+    let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+    $("#btnWhatsApp").attr('href', URL);
+    $("#btnWhatsApp-2").attr('href', URL);
+
+  }
 
 };
 
