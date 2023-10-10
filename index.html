@@ -18,7 +18,7 @@
 
     </div>
 
-    <a class="botao-carrinho hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
+    <a class="botao-carrinho animated fadeInUp hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
         <div class="badge-total-carrinho">0</div>
         <i class="fa fa-shopping-bag"></i>
     </a>
@@ -140,7 +140,7 @@
                     </div>
 
                 </div>
-                <div class="col-4 mb-5">
+                <div class="col-4 mb-5 wow fadeInUp">
                     <div class="card-icon text-center wow fadeInUp">
                         <img src="./img/icone-delivery.svg" width="250" />
                     </div>
@@ -153,8 +153,8 @@
                     </div>
 
                 </div>
-                <div class="col-4 mb-5">
-                    <div class="card-icon text-center wow fadeInUp">
+                <div class="col-4 mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
                         <img src="./img/icone-qualidade.svg" width="250" />
                     </div>
                     <div class="card-text text-center mt-3">
@@ -207,7 +207,7 @@
                     </div>
 
                 </div>
-                <div class="col-12 text-center fadeInUp">
+                <div class="col-12 text-center wow fadeInUp">
                     <a id="btnVerMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.verMais()">
                         Ver mais
                     </a>
@@ -222,20 +222,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-5 text-center">
-                    <div class="card-depoimentos">
-                        <div class="d-flex img-banner">
+                    <div class="card-depoimentos wow fadeIn">
+                        <div class="d-flex img-banner wow fadeInLeft delay-02s">
                             <img src="./img/pizzas.png" alt="">
                         </div>
 
                     </div>
                 </div>
                 <div class="col-7">
-                    <span class="hint-title"><b>Depoimentos</b></span>
-                    <h1 class="title">
+                    <span class="hint-title wow fadeIn"><b>Depoimentos</b></span>
+                    <h1 class="title wow fadeIn">
                         <b>O que dizem sobre nós?</b>
                     </h1>
                     <div class="mb-5">
-                        <div class="depoimento" id="depoimento-1">
+                        <div class="depoimento animated fadeIn" id="depoimento-1">
                             <div class="container-dados-depoimento">
                                 <div class="imagem-depoimento"></div>
                                 <div>
@@ -260,7 +260,7 @@
                             </p>
 
                         </div>
-                        <div class="depoimento hidden" id="depoimento-2">
+                        <div class="depoimento animated fadeIn hidden" id="depoimento-2">
                             <div class="container-dados-depoimento">
                                 <div class="imagem-depoimento"></div>
                                 <div>
@@ -284,7 +284,7 @@
                                 <i class="fas fa-quote-right"></i>
                             </p>
                         </div>
-                        <div class="depoimento hidden" id="depoimento-3">
+                        <div class="depoimento animated fadeIn hidden" id="depoimento-3">
                             <div class="container-dados-depoimento">
                                 <div class="imagem-depoimento"></div>
                                 <div>
@@ -310,9 +310,9 @@
                         </div>
 
                     </div>
-                    <a id="btnDepoimento-1" class="btn btn-sm btn-white btn-social mr-3 active" onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
-                    <a id="btnDepoimento-2" class="btn btn-sm btn-white btn-social mr-3" onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
-                    <a id="btnDepoimento-3" class="btn btn-sm btn-white btn-social" onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
+                    <a id="btnDepoimento-1" class="btn btn-sm btn-white btn-social wow fadeIn mr-3 active" onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
+                    <a id="btnDepoimento-2" class="btn btn-sm btn-white btn-social wow fadeIn mr-3" onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
+                    <a id="btnDepoimento-3" class="btn btn-sm btn-white btn-social wow fadeIn " onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
                 </div>
             </div>
         </div>
@@ -324,7 +324,7 @@
             <div class="row">
                 <div class="col-12">
 
-                    <div class="card-secondary">
+                    <div class="card-secondary wow fadeInUp">
 
                         <div class="row">
                             <div class="col-7">
@@ -338,7 +338,7 @@
                                     <br>
                                     Reserve sua data e horário de forma simples e rápida.
                                 </p>
-                                <a class="btn btn-yellow mt-4" href="#" id="btnReserva" target="_blank">
+                                <a class="btn btn-yellow mt-4 wow fadeIn delay-05s" href="#" id="btnReserva" target="_blank">
                                     Fazer reserva
                                 </a>
                             </div>
@@ -367,15 +367,15 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-3 container-logo-footer">
+                <div class="col-3 container-logo-footer wow fadeIn">
                     <img class="logo-footer" src="./img/logo.png">
                 </div>
-                <div class="col-6 container-texto-footer">
+                <div class="col-6 container-texto-footer wow fadeIn">
                     <p class="mb-0">
                         <b>Menu On-line</b>&nbsp; todos os direitos reservados.
                     </p>
                 </div>
-                <div class="col-3 container-redes-footer">
+                <div class="col-3 container-redes-footer wow fadeIn">
                     <a href="https://www.instagram.com/jefersonsena__/" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
                         <i class="fab fa-instagram"></i>
                     </a>
@@ -392,7 +392,7 @@
         </div>
     </footer>
 
-    <div class="modal-full hidden" id="modalCarrinho">
+    <div class="modal-full animated fadeIn hidden" id="modalCarrinho">
 
         <div class="m-header">
             <div class="container">
@@ -412,10 +412,10 @@
         <div class="m-body">
             <div class="container">
 
-                <div id="itensCarrinho" class="row mr-0 ml-0 hidden">
+                <div id="itensCarrinho" class="row mr-0 ml-0 animated fadeIn hidden">
 
                 </div>
-                <div id="localEntrega" class="row mr-0 ml-0 hidden">
+                <div id="localEntrega" class="row mr-0 ml-0 animated fadeIn hidden">
                     <div class="col-4">
                         <div class="form-group container-cep">
                             <label>Cep:</label>
@@ -496,7 +496,7 @@
                     </div>
 
                 </div>
-                <div id="resumoCarrinho" class="row mr-0 ml-0 hidden">
+                <div id="resumoCarrinho" class="row mr-0 ml-0 animated fadeIn hidden">
                     <div class="col-12">
                         <p class="title-carrinho mt-4">
                             <b>Itens do carrinho</b>
@@ -530,30 +530,30 @@
         </div>
         <div class="m-footer">
             <div class="container">
-                <div class="container-total text-right mb-4">
+                <div class="container-total text-right mb-4 animated fadeInRight delay-02s">
                     <p class="mb-0">
                         <span>Subtotal:</span>
                         <span id="lblSubtotal">R$ 0,00</span>
                     </p>
-                    <p class="mb-0 texto-entrega">
+                    <p class="mb-0 texto-entrega animated fadeInRight delay-03s">
                         <span><i class="fas fa-motorcycle"></i> Entrega:</span>
                         <span id="lblValorEntrega"> + R$ 0,00</span>
                     </p>
-                    <p class="mb-0 texto-total">
+                    <p class="mb-0 texto-total animated fadeInRight delay-05s">
                         <span><b>Total</b></span>
                         <span class="valor-total"><b id="lblValorTotal">R$ 0,00</b></span>
                     </p>
                 </div>
-                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">
+                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right animated fadeInRight" id="btnEtapaPedido">
                     Continuar
                 </a>
-                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">
+                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right animated fadeInRight hidden" id="btnEtapaEndereco">
                     Revisar pedido
                 </a>
-                <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" target="_blank">
+                <a href="#" class="btn btn-yellow float-right animated fadeInRight hidden" id="btnEtapaResumo" target="_blank">
                     Enviar pedido
                 </a>
-                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right mr-3 hidden" id="btnVoltar">
+                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right animated fadeInUp mr-3 hidden" id="btnVoltar">
                     Voltar
                 </a>
             </div>

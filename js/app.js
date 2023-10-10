@@ -219,18 +219,13 @@ cardapio.metodos = {
 
           cardapio.metodos.carregarValores();
         }
-        
-
       })
-
     }
     else{
       $("#itensCarrinho").html('<p class="carrinho-vazio"><i class="fa fa-shopping-bag"></i>Seu carrinho está vazio.</p>');
       cardapio.metodos.carregarValores();
     }
-
   },
-
   // diminuir quantidade do item no carrinho
   diminuirQuantidadeCarrinho: (id) => {
 
