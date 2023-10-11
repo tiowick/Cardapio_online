@@ -17,6 +17,7 @@ cardapio.eventos = {
     init: () => {
         cardapio.metodos.obterItensCardapio();
         cardapio.metodos.carregarBotaoLigar();
+        cardapio.metodos.abrirWhatsApp();
         cardapio.metodos.carregarBotaoReserva();
     }
 
@@ -533,6 +534,18 @@ cardapio.metodos = {
     carregarBotaoLigar: () => {
 
         $("#btnLigar").attr('href', `tel:${CELULAR_EMPRESA}`);
+
+    },
+
+    abrirWhatsApp: () => {
+
+        var texto = 'Olá, como funciona os seus serviços?';
+
+        let encode = encodeURI(texto);
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+        $("#btnWhatsApp").attr('href', URL);
+        $("#btnWhatsApp-2").attr('href', URL);
 
     },
 
